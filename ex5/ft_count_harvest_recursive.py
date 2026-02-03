@@ -1,21 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_count_harvest_recursive.py                      :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: klucchin <klucchin@student.42nice.fr>      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/01/31 22:33:21 by klucchin          #+#    #+#              #
-#    Updated: 2026/01/31 22:57:35 by klucchin         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_count_harvest_recursive.py                     :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: klucchin <klucchin@student.42.fr>         +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/02/03 17:58:16 by klucchin        #+#    #+#               #
+#  Updated: 2026/02/03 18:35:50 by klucchin        ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
 
-def harvest(days, count=1):
+def ft_count_harvest_recursive(days, count=1):
     if count > days:
         print("Harvest time!")
         return
     print(f"Day {count}")
-    harvest(days, count + 1)
+    ft_count_harvest_recursive(days, count + 1)
 
-Days = int(input("Days until harvest: "))
-harvest(Days)
+
+days = int(input("Days until harvest: "))
+ft_count_harvest_recursive(days)
